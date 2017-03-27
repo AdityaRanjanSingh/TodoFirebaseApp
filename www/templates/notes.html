@@ -37,9 +37,7 @@
                 <i class="icon ion-music-note"></i> Start listening
             </a>
         </div>
-        <div class="">
-        	
-        </div>
+        
  
 
     </ion-content>
@@ -47,12 +45,14 @@
         
         
             <div id="container-floating" data-ng-class="{containerfloating: !clicked , containerfloatingclicked:clicked}" data-ng-click="clicked=!clicked">
-                <div class="nd5 nds" data-toggle="tooltip" data-placement="left" data-original-title="Simone"></div>
-                <div class="nd4 nds" data-toggle="tooltip" data-placement="left" data-original-title="contract@gmail.com"><img class="reminder">
-                    <p class="letter">C</p>
+                <div class="nd5 nds" data-toggle="tooltip" data-placement="left" data-original-title="logOut">
+                    <p class="letter" data-ng-click="logOutPopup()"><i class="icon ion-power"></i></p>
                 </div>
-                <div class="nd3 nds" data-toggle="tooltip" data-placement="left" data-original-title="Reminder">
-                <p class="reminder" data-ng-click="openSearchPopover()"><i class="icon ion-search"></i></p>
+                <div class="nd4 nds" data-toggle="tooltip" data-placement="left" data-original-title="delete"><img class="reminder">
+                    <p class="letter"><i class="icon ion-trash-b"></i></p>
+                </div>
+                <div class="nd3 nds" data-toggle="tooltip" data-placement="left" data-original-title="search">
+                <p class="letter" data-ng-click="openSearchPopover()"><i class="icon ion-search"></i></p>
                 </div>
                 <div class="nd1 nds" data-toggle="tooltip" data-placement="left" data-original-title="Edoardo@live.it"><img class="reminder">
                     <p class="letter" data-ng-click="modal.show()"><i class="icon ion-edit"></i></p>

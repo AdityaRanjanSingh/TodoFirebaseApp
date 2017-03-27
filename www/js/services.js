@@ -49,12 +49,24 @@ angular.module("Todo")
           firebase.database().ref("/notes-application").update(updates);
    }
 
-   this.fetchUserNotes=function(){
+   this.fetchUserNotes=function($scope){
     var user= firebase.auth().currentUser;
-    var userPostsRef = firebase.database().ref('notes-application/user-notes' + user.uid);
+    var array=[];
+    var postsRef =firebase.database().ref('user-posts/' + user.uid).orderByChild('starCount');
+     postsRef.once('value', function(data) {
+      data.forEach(function(a){
+        console.log(a.val());
+        if(array.indexOf(a)===-1){
+          array.push(a);
+        }
+      })
+
+     });
+     return array
+    /*var userPostsRef = firebase.database().ref('/notes-application/user-notes/' + uid);
       userPostsRef.on('child_added', function(data) {
     
-    });
+    });*/
 
    }
 

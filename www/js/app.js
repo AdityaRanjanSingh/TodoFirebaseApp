@@ -38,8 +38,9 @@ angular.module('Todo',['ionic'])
   // Each tab has its own nav history stack:
 
   .state('notes', {
-    url: '/notes',
+    url: '/notes:uid',
     templateUrl: 'templates/notes.html',
+   
     controller:'notesCtrl'
     
   });
