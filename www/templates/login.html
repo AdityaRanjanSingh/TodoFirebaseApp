@@ -1,0 +1,37 @@
+<ion-view >
+  <ion-content class="loginForm content" data-ng-controller="loginCtrl">
+
+   <div  class=" list formContent">
+
+<div class="button-bar">
+  <a class="button " data-ng-click="signUp=!signUp" >Sign Up</a>
+  <a class="button" data-ng-click="signUp=false" >Sign In</a>
+  
+</div>
+  <label data-ng-show="signUp" class="item item-input item-floating-label">
+    
+    <p class="input-label">Name</p>
+    <input type="text" data-ng-model="user.name" placeholder="Name">
+  </label>
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Email</span>
+    <input type="email" data-ng-model="user.email" value="aditya@gmail.com"  placeholder="Email">
+  </label>
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Password</span>
+    <input type="password" data-ng-model="user.password" value="aditya"  placeholder="Password">
+  </label>
+  <button data-ng-click="signInToggle()" class=" button  button-positive login-submit">
+  Submit
+</button>
+
+</div>
+
+    
+
+          
+</ion-content>
+
+</ion-view>
+    
+

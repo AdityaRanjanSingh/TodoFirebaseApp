@@ -1,0 +1,26 @@
+<ion-modal-view id="my-modal"  class="loginForm my-modal" data-ng-controller="loginCtrl" >
+            
+            <ion-content class="loginForm">
+                <div class="newNoteForm">
+                <div class="bar bar-header bar-positive new-note-bar">
+  <h1 class="title">bar-light</h1>
+</div>
+                
+                     <input type="text" class="new-note-title" placeholder="titles" data-ng-model="modal.newnotetitle">
+                     
+                    <textarea class="new-note-text" placeholder="Text" data-ng-model="modal.newnotetext"></textarea>
+                    <div class="row">
+                        <div class="col">
+                            <button class=" new-note-save button button-positive " data-ng-click="saveNote()">Save</button>
+                        </div>
+                        <div class="col">
+                            <button class=" new-note-save button button-positive " data-ng-click="closeModal()">Cancel</button>
+                        </div>
+                    </div>
+                
+                   
+                </div>
+            </ion-content>
+                            
+                            
+        </ion-modal-view>

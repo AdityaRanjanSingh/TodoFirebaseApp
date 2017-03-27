@@ -1,0 +1,75 @@
+<ion-view data-ng-controller="notesCtrl">
+    <ion-header-bar class="bar bar-header bar-positive">
+        <h1 class="title">Notes</h1>
+        <button class="button button-clear button-primary" ng-click="modal.hide()"><i class="icon ion-android-close"></i></button>
+    </ion-header-bar>
+
+    <ion-content class="has-header content" data-ng-controller="notesCtrl">
+        <!-- <div class="bar bar-header bar-positive">
+  <button class=" button button-clear " ng-click="openModal()"><i class="icon ion-compose"></i></button>
+     <button class="button button-clear " ng-click="doSomething()"><i class="icon ion-search"></i></button>
+      <button class="button button-clear " ng-click="doSomething()"><i class="icon ion-trash-b"></i></button>
+  <div class="h1 title">Notes</div>
+  <button class="button button-clear " ng-click="doSomething()"><i class="icon ion-ionic"></i></button>
+</div> -->
+
+        <div class="list card">
+            <div class="item item-avatar" data-ng-init="expandContent=false">
+            	<a data-ng-click="expandContent = !expandContent">Pretty Hate Machine<</a>
+                <label for="toggle">Pretty Hate Machine</label>
+            </div>
+            <div id="expand" class="ng-class:{expand:!expandContent ,expandclicked:expandContent}; item item-image">
+                <img src="cover.jpg">
+            </div>
+            <a class="item item-icon-left assertive" href="#">
+                <i class="icon ion-music-note"></i> Start listening
+            </a>
+        </div>
+        <div class="list card">
+            <div class="item item-avatar">
+            	<input id="toggle" type="checkbox" checked>
+                <label for="toggle">Pretty Hate Machine</label>
+            </div>
+            <div id="expand" class="item item-image">
+                <img src="cover.jpg">
+            </div>
+            <a class="item item-icon-left assertive" href="#">
+                <i class="icon ion-music-note"></i> Start listening
+            </a>
+        </div>
+        <div class="">
+        	
+        </div>
+ 
+
+    </ion-content>
+    <!-- <ion-footer-bar align-title="left" class=""> -->
+        
+        
+            <div id="container-floating" data-ng-class="{containerfloating: !clicked , containerfloatingclicked:clicked}" data-ng-click="clicked=!clicked">
+                <div class="nd5 nds" data-toggle="tooltip" data-placement="left" data-original-title="Simone"></div>
+                <div class="nd4 nds" data-toggle="tooltip" data-placement="left" data-original-title="contract@gmail.com"><img class="reminder">
+                    <p class="letter">C</p>
+                </div>
+                <div class="nd3 nds" data-toggle="tooltip" data-placement="left" data-original-title="Reminder">
+                <p class="reminder" data-ng-click="openSearchPopover()"><i class="icon ion-search"></i></p>
+                </div>
+                <div class="nd1 nds" data-toggle="tooltip" data-placement="left" data-original-title="Edoardo@live.it"><img class="reminder">
+                    <p class="letter" data-ng-click="modal.show()"><i class="icon ion-edit"></i></p>
+                </div>
+                <div id="floating-button" data-toggle="tooltip" data-placement="left" data-original-title="Create" ">
+                    <p class="plus">+</p>
+                    <p class="cross"><i class="icon ion-ios-close-empty"></i></p>
+                    
+                </div>
+            </div>
+        
+   <!--  </ion-footer-bar> -->
+                    
+                    
+
+    <!-- addNote Model -->
+    
+   
+       
+</ion-view>
